@@ -1,13 +1,13 @@
 export function renderFunction(posts) {
-    const markup = posts.map(({ comments, downloads, likes,
-        largeImageURL, previewURL, previewWidth, views }) => {
+    const markup = posts.map(({ comments, downloads, likes,tags,
+        largeImageURL, previewURL, views }) => {
 
         return `<li class="gallery-item">
                     <a class="gallery-link" href="${largeImageURL}">
                     <img
                         class="gallery-image"
                         src="${previewURL}"
-                        alt="image"
+                        alt="${tags}"
                         />
                     </a>
                     <div class="image-descriptions-container">

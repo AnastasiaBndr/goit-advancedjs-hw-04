@@ -2,12 +2,8 @@
     --loader-color: #6C8CFF;
 }
 .loader {
-    margin-top: 40vh;
+    margin: 20px 0;
     display: none;
-}
-
-.visible {
-    display: block;
 }
 
 .loader,
