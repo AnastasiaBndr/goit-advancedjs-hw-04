@@ -1,0 +1,91 @@
+:root {
+  --overlay-color: #2E2F42CC;
+  --button-hover-color: #6C8CFF;
+  --button-color:#4E75FF;
+}
+
+body {
+  font-family: Montserrat;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #242424;
+  display: flex;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #F5F5F5;
+}
+
+main {
+  flex-grow: 1;
+}
+main:has(.back-link) {
+  text-align: center;
+}
+
+input{
+  box-sizing: border-box;
+}
+
+textarea {
+  box-sizing: border-box;
+}
+
+.navigation-link{
+  display: block;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.navigation-link:hover, .navigation-link:focus{
+  color:#6C8CFF;
+  transition: color 0.25s;
+
+
+}
+
+button {
+  box-sizing: border-box;
+  background-color: var(--button-color);
+  border: none;
+  height: 40px;
+  width: 91px;
+  font-size: 16px;
+  font-weight: 500;
+
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #fff;
+  letter-spacing: 0.04rem;
+
+}
+
+button:hover,
+button:focus {
+  border: none;
+  background-color: var(--button-hover-color);
+  transition: background-color 0.25s;
+}
+
+button:disabled {
+  background-color: var(--button-disabled);
+}
+
+.sl-overlay {
+  background: var(--overlay-color) !important;
+}
+
+.sl-close,
+.sl-counter,
+.sl-prev,
+.sl-next {
+  color: #fff !important;
+}
+
+.iziToast{
+  font-family: Montserrat !important;
+  line-height: 1.3rem !important;
+}
+

@@ -1,0 +1,35 @@
+:root {
+    --border-color: #808080;
+    --text-input-color: #2E2F42;
+    --input-disabled: rgb(185, 185, 185);
+}
+
+
+button{
+    margin-left: 8px;
+}
+
+input[type="text"] {
+    min-width: 250px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 16px;
+    border: 1px solid var(--border-color);
+
+    font-family: Montserrat;
+
+    color: var(--text-input-color);
+    padding: 8px 16px;
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus {
+    border-color: #000000;
+    transition: border-color 0.25s;
+
+}
+
+input[type="text"]:disabled {
+    border-color: var(--input-disabled);
+    color: var(--input-disabled); }
