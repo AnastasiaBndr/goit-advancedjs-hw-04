@@ -59,7 +59,7 @@ function fetchWithTimeout(page) {
             let top = 0;
             if (page > 1) {
                 const rect = gallery.firstChild.getBoundingClientRect();
-                top = rect.height * 3;
+                top = rect.height * 2;
             }
 
             gallery.insertAdjacentHTML("beforeend", renderFunction(posts.hits));
