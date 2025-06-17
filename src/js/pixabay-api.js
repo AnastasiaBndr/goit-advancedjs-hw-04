@@ -21,24 +21,18 @@ export async function pixabayApi(inputValue, page = 1) {
 	searchParams.set("q", inputValue.trim().toLowerCase());
 	searchParams.set("page", page);
 
-	const posts = await axios.get(searchParams.toString())
-		.then((response) => {
-			if (response.status !== 200) {
-				throw new Error(response.status);
-			}
-			return response.data;
-		})
-		.catch((err) => {
-			iziToast.error({
-				message: `${err}`,
-				closeOnClick: true,
-				position: "topRight",
-				displayMode: 0,
-				progressBar: false,
-			});
+	try {
+		const posts = await axios.get(searchParams.toString());
+		return posts.data;
+	} catch(err) {
+		iziToast.error({
+			message: `${err}`,
+			closeOnClick: true,
+			position: "topRight",
+			displayMode: 0,
+			progressBar: false,
 		});
-
-	return posts;
+	}
 
 }
 
